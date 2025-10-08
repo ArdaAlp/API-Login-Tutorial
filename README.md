@@ -3,26 +3,26 @@
 [![SQLite](https://img.shields.io/badge/SQLite-3-orange)](https://www.sqlite.org/index.html)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-# FastAPI Kullanıcı Yönetim Sistemi
+# FastAPI User Management System
 
-Bu proje, **FastAPI**, **SQLite** ve **Jinja2** kullanarak basit bir kullanıcı yönetim sistemi oluşturur. Kullanıcılar sisteme kayıt olabilir, giriş yapabilir ve şifrelerini unutmaları durumunda görüntüleyebilirler.
-
----
-
-## Özellikler 🌟
-
-- Kullanıcı kayıt (Register)  
-- Kullanıcı girişi (Login)  
-- Dashboard görüntüleme
-- Şifre unutma (Forgotten Password)  
-- SQLite veritabanı ile kullanıcı verilerini saklama  
-- Jinja2 ile HTML templating  
+This project creates a simple user management system using **FastAPI**, **SQLite**, and **Jinja2**. Users can register with the system, log in, and view their passwords if they forget them.
 
 ---
 
-## Kurulum 💻
+## Features 🌟
 
-### 1. Projeyi klonlayın:
+- User Registration
+- User Login  
+- View Dashboard
+- Forgotten Password 
+- Store user data with SQLite database 
+- HTML templating with Jinja2
+
+---
+
+## Installation 💻
+
+### 1. Clone the project:
 ```bash
 git clone https://github.com/ArdaAlp/API-Login-Tutorial.git
 cd "API-Login-Tutorial"
@@ -30,7 +30,7 @@ cd "API-Login-Tutorial"
 
 <br>
 
-### 2. Sanal ortam oluşturun ve aktif edin:
+### 2. Create and activate a virtual environment:
 ```python -m venv venv
 source venv/bin/activate      # Linux / macOS
 venv\Scripts\activate         # Windows
@@ -38,47 +38,47 @@ venv\Scripts\activate         # Windows
 
 <br>
 
-### 3. Gerekli paketleri yükleyin:
+### 3. Install the required packages:
 ```
 pip install fastapi uvicorn jinja2 pydantic
 ```
 
 ---
 
-## Kullanım 📌
-- #### Kayıt Ol: ```/register``` sayfasından kullanıcı adı ve şifre ile kayıt olun.
+## Usage 📌
+- #### Register: Register with a username and password on the ```/register``` page.
 
-- #### Giriş Yap: ```/login``` sayfasından kullanıcı adı ve şifre ile giriş yapın.
+- #### Login: Log in with your username and password on the ```/login``` page.
 
-- #### Şifreyi Unuttum: ```/forgotten``` sayfasından kullanıcı adınızı girerek şifrenizi görebilirsiniz.
+- #### Forgotten Password: You can view your password by entering your username on the ```/forgotten``` page.
 
-- #### Dashboard: Başarılı giriş sonrası tüm kullanıcı verilerini görebileceğiniz dashboard açılır.
+- #### Dashboard: After a successful login, the dashboard where you can view all user data will open.
 
 ---
 
-## Çalıştırma ▶️
-*Konsoldan:* ```uvicorn main:app --reload``` **ya da** ```fastapi dev app.py```
+## Running ▶️
+*From Console:* ```uvicorn main:app --reload``` **or** ```fastapi dev app.py```
 
-*Tarayıcıdan:* ```http://127.0.0.1:8000```
+*From Browser:* ```http://127.0.0.1:8000```
 
 *Swagger:* ```http://127.0.0.1:8000/docs```
 
 ---
 
-## Veritabanı 🗂
-*SQLite kullanılır ve proje dizininde* ```users.db``` *olarak saklanır.*
+## Database 🗂
+*The database uses SQLite and is stored as* ```users.db``` *in the project directory.*
 
-```user``` tablosu aşağıdaki alanlara sahiptir:
+The ```user``` table has the following fields:
 
-| Alan     | Tür     | Açıklama               |
-| -------- | ------- | ---------------------- |
-| id       | INTEGER | Otomatik artan ID      |
-| username | TEXT    | Kullanıcı adı (unique) |
-| password | TEXT    | Şifre                  |
+| Field     | Type     | Description              |
+| -------- | ------- | ----------------------     |
+| id       | INTEGER | Auto-incrementing ID       |
+| username | TEXT    | Username (unique)          |
+| password | TEXT    | Password                   |
 
 ---
 
-## Notlar 🔧
-- *Bu proje prototip amaçlıdır, şifreler plain text olarak saklanır. Üretim ortamında hashleme kullanılmalıdır.*
+## Notes 🔧
+- *This project is for prototyping purposes, and passwords are stored as plain text. Hashing should be used in a production environment.*
 
-- ***Projeyi geliştirmek için** kullanıcı rolleri, token tabanlı authentication veya frontend framework entegrasyonu eklenebilir.*
+- ***To enhance the project**, you could add user roles, token-based authentication, or integrate a frontend framework.*
