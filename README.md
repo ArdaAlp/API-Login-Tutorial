@@ -83,4 +83,4 @@ The ```user``` table has the following fields:
 
 - ***To enhance the project**, you could add user roles, token-based authentication, or integrate a frontend framework.*
 
-- The project language is Turkish and new language support coming soon...
+- *The project language is Turkish and new language support **coming soon...***
