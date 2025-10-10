@@ -82,3 +82,5 @@ The ```user``` table has the following fields:
 - *This project is for prototyping purposes, and passwords are stored as plain text. Hashing should be used in a production environment.*
 
 - ***To enhance the project**, you could add user roles, token-based authentication, or integrate a frontend framework.*
+
+- The project language is Turkish and new language support coming soon...
